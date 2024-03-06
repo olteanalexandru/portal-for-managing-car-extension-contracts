@@ -1,0 +1,286 @@
+.removePaddingRight{
+    margin-right: -8px !important;
+}
+.removePaddingLeft{
+    margin-left: -8px !important;
+}
+
+.positioned-title{
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size:30px;
+    font-weight: 700;
+    margin-top:0px;
+}
+
+label{
+    font-size: 18px;
+    font-weight: 400;
+    display: inline!important;
+}
+
+.btn-primary{
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.btn-submit{
+    font-weight: 700!important;
+    padding: 11px 22px !important;
+}
+
+.required{
+    color: red;
+}
+
+.modal-footer{
+    align-items: flex-start!important;
+    padding-left: 0px;
+}
+
+.modal-content {
+    top: 40px;
+}
+
+.modal-footer > *{
+    margin: 0px;
+}
+
+#termsAndCondBtn{
+    font-size: 18px;
+}
+
+th.gridjs-th:first-child{
+    width:10px;
+}
+
+.NegativeMaginTop{
+    padding-bottom: 45px;
+}
+
+td.gridjs-td
+{
+    padding: 13px 0px 10px 30px!important;
+} 
+.gridjs-wrapper{
+   box-shadow: 0px 0px 0px 0px!important;
+}
+
+#expiration-message{
+    color: red;
+}
+
+#termsAndCondBtn{
+    color:blue;
+    cursor:pointer;
+}
+
+#termsAndCondBtn:hover {
+    color: darkblue;
+}
+
+.top-button{
+    margin-top:-6%;
+    margin-left: 10px;
+    line-height: 18px !important;
+    color:whitesmoke;
+}
+
+::placeholder { /* Most modern browsers support this */
+    color: rgb(220, 217, 217)!important;
+    opacity: 1; /* Firefox requires this to not be 0 */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgb(220, 217, 217)!important;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgb(220, 217, 217)!important;
+}
+
+
+
+#startdate::placeholder, #enddate::placeholder {
+    color: #787B80!important; 
+} 
+
+.gridjs-search-input::placeholder {
+    color: #787B80!important; 
+} 
+
+
+#the-covered-mileage option:not(:first-child) {
+    color: black; 
+}
+
+#contract-type option:not(:first-child) {
+    color: black; 
+}
+
+#the-contract-level option:not(:first-child) {
+    color: black; 
+}
+
+
+#the-months-to-cover option:not(:first-child) {
+    color: black; 
+}
+
+.language-link {
+    opacity: 0.8;
+}
+
+.language-link.selected {
+    opacity: 1;
+    border-bottom: solid 2px black;
+}
+
+#simulate-fields {
+    display: flex;
+    align-items: baseline;
+}
+
+.request-offer-button-container {
+    display: flex;
+    align-items: baseline;
+}
+
+/* layout helpers */
+.ml-1 {
+    margin-left: 0.5rem;
+}
+.ml-2 {
+    margin-left: 1rem;
+}
+.pt-100 {
+    padding-top: 100px;
+}
+
+.modal-dialog {
+    pointer-events: all !important;
+}
+
+.positioned-back {
+    position: absolute;
+    /* left: 10%; */
+    min-width: 100%;
+    top: 80px;
+    z-index: 1050;
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.positioned-back-text {
+    cursor: pointer;
+    min-width: fit-content!important;
+}
+
+.positioned-back-text:hover {
+    text-decoration: underline;
+}
+
+#reset-button {
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#reset-button:hover {
+    text-decoration: underline;
+}
+
+
+
+@media (max-width: 1200px) {
+    .gridjs-search {
+      margin-bottom: 8%;
+      float: left;
+      width: auto;
+    }
+    .NegativeMaginTop {
+      padding-bottom: 20px;
+  }
+  .positioned-title{
+    margin-top: -25px;
+  }
+  td {
+    min-width: fit-content!important;
+  }
+  .form-control{
+   max-width: 143px; 
+  }
+  }
+  /* .form-control{
+    min-width: 200px!important; 
+   } */
+
+.removePaddingRight{
+    padding-right: 0px!important;
+  }
+
+  .removePaddingLeft{
+    padding-left: 0px!important;
+  }
+
+  #expiration-message {
+    display: block ;
+}
+
+
+
+@media (max-width: 767px) {
+    #startdate {
+        margin-left: -8px;
+    }
+    #mobilemenu{
+        margin-top: -21px;
+        margin-right: -110px;
+    }
+}
+
+
+#loading {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    min-height: -webkit-fill-available; /* For Webkit browsers */
+    min-height: 100vh; /* For other browsers */
+    margin-left: 47%;
+    margin-top: 10%;
+}
+
+/* Style for the loader */
+#loading h1 {
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #000000;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: 1.5rem; /* Adjust as needed */
+    color: black; /* Color of the text/content inside the loader */
+}
+
+/* Keyframes for spinning animation */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+.dropdown-item {
+    display: inline-flex; 
+    margin-right: 10px; 
+}
+
+.fa-user-plus:after , .fa-sign-out-alt:before{
+    margin-right:10 px;
+}
+

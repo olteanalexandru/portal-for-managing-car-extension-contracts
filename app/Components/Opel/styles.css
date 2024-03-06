@@ -1,0 +1,657 @@
+/* @font-face{
+  font-family: Opel Next;
+  src: url(./font/Opel\ Next\ W05\ Bold.ttf);
+} */
+@font-face {
+  font-family: Opel Next;
+  src: url(./font/Opel\ Next\ W05\ Light.ttf);
+}
+@font-face {
+  font-family: Opel Bold;
+  src: url(./font/Opel\ Next\ W05\ Bold.ttf);
+}
+
+h1 , h2 , h3 , h4 , h5 {
+  font-family: Opel Bold;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 2px solid black;
+  margin-bottom: 10vh;
+  width: 100%;
+}
+
+.text-black {
+  color: black !important;
+}
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  max-width: 13vh;
+}
+
+.logo {
+  max-width: 100%;
+}
+
+.banner-header {
+  /* background-image: url('../../Images/Header-banner.jpg'); */
+  background-size: cover;
+  min-height: 30vh;
+  width: 100%;
+}
+
+.top-right-elements {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.user-display {
+  color: black;
+  font-weight: bold;
+  margin-right: 20px;
+  margin-bottom: 0px;
+}
+
+.top-left-elements {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.form-group.col-md-3.d-flex.flex-column.align-items-start {
+  display: inline-flex;
+  justify-content: end;
+}
+
+.form-control.form-control-sm {
+  margin-right: 3px;
+}
+
+.btn.btn-danger.mb-3.float-right {
+  float: right;
+  margin-top: 25px;
+}
+
+.PeugeotHeader {
+  height: 80px;
+  background-color: #ffffff;
+}
+
+.PeugeotLogoWhite1 {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+.ChangeCompany,
+.MyRequests,
+.NewRequest,
+.Fr,
+.De,
+.It {
+  font-family: "Opel Next";
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.ChangeCompany {
+  font-size: 16px;
+  font-family: Opel Bold;
+}
+
+.MyRequests,
+.NewRequest {
+  font-size: 10px;
+}
+
+.Fr,
+.De,
+.It {
+  /* margin-top: 2%;
+  margin-right:10%; */
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.nav-link {
+  color: #3b3938;
+  font-size: 16px;
+  font-family: Opel Bold;
+  word-wrap: break-word;
+}
+.border-bottom-contract {
+  margin-top: 15px;
+  border-bottom: 1px solid #3b3938;
+  font-weight: 400;
+}
+.Language {
+  margin-top: 2%;
+  margin-right: 3%;
+}
+.signout-button {
+  margin-top: -6%;
+  font-size: 10px;
+  color: #000000;
+}
+
+/* Grid table: */
+
+.RequestNumber {
+  text-align: center;
+  color: black;
+  font-size: 14px;
+  font-family: "Opel Next";
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+.Model {
+  text-align: center;
+  color: black;
+  font-size: 14px;
+  font-family: "Opel Next";
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+.Vin {
+  text-align: center;
+  color: black;
+  font-size: 14px;
+  font-family: "Opel Next";
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+.PeugeotTag {
+  padding-left: 11px;
+  padding-right: 11px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background: #107c10;
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.Tag {
+  color: #000000;
+  font-size: 10px;
+  font-family: "Opel Next";
+  font-weight: 700;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+.lookup-text {
+  font-family: Opel Next;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.peugeot th,
+.peugeot td {
+  text-align: center;
+  color: #fff;
+  font-family: "Opel Next", sans-serif;
+  font-weight: 700;
+  font-size: 144px;
+  word-wrap: break-word;
+}
+
+.peugeot th {
+  background-color: black;
+}
+
+.experimental-classname {
+  font-family: "Opel Next", sans-serif!important;
+  background-color: black;
+}
+
+.experimental-classname .gridjs-pagination {
+  color: white;
+  font-weight: 500;
+  border: none;
+}
+
+.experimental-classname .gridjs-pagination .gridjs-pages button {
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  border: none;
+  border-radius: 0px;
+}
+
+.experimental-classname .gridjs-pagination .gridjs-pages button:hover {
+  background-color: yellow;
+  color: black;
+  cursor: pointer;
+}
+
+#table-container {
+  margin-top: -12.5% !important;
+  position: relative !important;
+  z-index: 1;
+}
+
+.modal-black {
+  color: black;
+}
+
+body {
+  font-family: "Opel Next";
+}
+
+/* Rest of the code remains the same */
+.styled-form {
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 2px 4px 0px rgba(0, 0, 0, 0.14);
+}
+
+.form-input {
+  color: #787b80;
+}
+
+.btn-submit {
+  background: #000;
+  border:none!important;
+}
+
+.nav-link:hover {
+  background-color: yellow;
+  color : black;
+  width : 100%;
+  height : 100%;
+}
+.btn-sm:hover {
+  background-color: yellow;
+  color : black;
+}
+
+
+.modal-opacity {
+  opacity: 0.9;
+}
+
+/* Calendar  */
+
+.ui-datepicker-calendar {
+  background-color: white;
+}
+.ui-state-default {
+  background: white !important;
+  color: black;
+  border: none !important;
+}
+/* Modify the overall calendar appearance */
+#ui-datepicker-div {
+  background-color: white;
+  font-family: Opel Next;
+}
+
+/* Change the header background and text color */
+.ui-datepicker-header {
+  background: white !important;
+  color: black;
+}
+
+/* Change the prev/next button color */
+.ui-datepicker-prev,
+.ui-datepicker-next {
+  color: black;
+}
+
+/* Change the month and year color */
+.ui-datepicker-title .ui-datepicker-month,
+.ui-datepicker-title .ui-datepicker-year {
+  color: black;
+}
+
+/* Change the day color */
+.ui-datepicker-calendar th span {
+  color: black;
+}
+
+/* Change the date number color */
+.ui-datepicker-calendar td a {
+  color: white;
+}
+.modal-content {
+  border-radius: 0px;
+}
+#newContractModal,
+#see-more-modal {
+  background-color: white;
+}
+.PeugeotHeader {
+  z-index: 9999;
+  position: relative;
+}
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+  background-color: #e9e9e9;
+}
+
+#search-form .form-group:nth-child(1) {
+  min-width: 25%;
+}
+
+#textbox1 {
+  font-family: "Opel Next", sans-serif;
+  color: #787b80;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+.citroen-label {
+  font-family: "Opel Next", sans-serif;
+  color: #787b80;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+.lookup-text h2 {
+  font-family: "Opel Next", sans-serif;
+  color: #787b80;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+.form-select-sm {
+  font-family: "Opel Next", sans-serif;
+  color: #787b80;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+#vin {
+  font-family: "Opel Next", sans-serif;
+  color: #787b80;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+#startdate,
+#enddate {
+  font-family: Opel Next;
+  color: #787b80;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+.form-control {
+  /* border-right: 1px solid black; */
+  border-bottom: 1px solid black;
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 0px;
+  font-family: Opel Next;
+}
+
+.centered-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .gridjs-tr {
+  text-align: center!important; 
+} */
+
+.gridjs-search {
+  margin-bottom: 6%;
+  float: right;
+  width: auto;
+}
+
+.gridjs-search-input {
+  border-radius: 0px !important;
+  border-bottom: 1px solid #000 !important;
+  width: 100%;
+  margin-left: -5%;
+}
+
+#simulate-price {
+  margin-top: 75px;
+}
+
+/* Medias queries */
+
+@media (max-width: 991px) {
+  .gridjs-search-input {
+    border-radius: 0px !important;
+    border-bottom: 1px solid #000 !important;
+    border-right: 1px solid #000 !important;
+    border-top: 1px solid #f0f0f0 !important;
+    width: auto !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    margin-left: 5%;
+  }
+  .gridjs-search {
+    margin-bottom: 0%;
+    margin-top: 15%;
+    float: left;
+  }
+}
+
+.lookup-text {
+  margin-top: 5%;
+  margin-bottom: 4%;
+}
+/* Medias queries */
+
+@media (max-width: 991px) {
+  .gridjs-search-input {
+    border-radius: 0px !important;
+    border-bottom: 1px solid #000 !important;
+    border-right: 1px solid #000 !important;
+    border-top: 1px solid #f0f0f0 !important;
+    width: auto !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    margin-left: 5%;
+  }
+  .gridjs-search {
+    margin-bottom: 0%;
+    margin-top: 15%;
+    float: left;
+  }
+}
+
+.lookup-text {
+  margin-top: 4%;
+  margin-bottom: 2%;
+  margin-left: 5px;
+}
+.PeugeotHeader {
+  padding-top: 10px;
+}
+
+.nav-links a#new-contract-link {
+  display: inline-block;
+
+}
+
+.user-logout-section {
+  margin-left: 30px;
+}
+
+.select2-selection--single {
+  border-color: white !important;
+}
+
+.select2-selection--single {
+  border-color: white !important;
+}
+
+.select2-results_options {
+  z-index: 9999;
+}
+
+/* .positioned-title {
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -50%);
+  z-index: 1050;
+} */
+.positionModal{
+  padding-top: 170px!important;
+  }
+
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  color: inherit !important;
+}
+
+.nav-links a#new-contract-link {
+  display: inline-block;
+
+}
+.border-bottom-contract {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.nav-link a#new-extension-link {
+  display: inline-block;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.btn {
+  font-size: 12px;
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  display: inline-flex;
+  border-radius: 0px !important;
+  transition: background-color 0.3s ease-in-out;
+  margin-left: 15px;
+}
+
+.btn:hover {
+  background-color: yellow;
+  outline: none;
+  color: black;
+
+}
+
+.btn:focus {
+  outline: none;
+  background-color: yellow;
+}
+
+.btn:active {
+  background-color: black;
+}
+
+.btn:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.btn[disabled]:hover {
+  background-color: #ccc;
+}
+
+.btn[disabled]:active {
+  background-color: #ccc;
+}
+
+.btn[disabled]:focus {
+  outline: none;
+}
+.input-locked {
+  background-color: white !important;
+  font-weight: 300;
+}
+@media (min-width: 1400px) {
+  #table-container {
+    min-width: fit-content !important;
+  }
+}
+.my-requests {
+  display: none;
+}
+
+#simulate-price {
+  margin-top: 75px;
+  margin-left: 0px;
+  width: auto;
+}
+#requestOfferButton {
+  margin-left: 0px;
+  width:max-content
+}
+
+.modal-footer {
+  padding-left: 0px;
+}
+
+#reset-button:hover{
+  background-color: yellow!important;
+  color: black;
+  text-decoration: none;
+ 
+}

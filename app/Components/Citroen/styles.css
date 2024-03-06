@@ -1,0 +1,595 @@
+@font-face {
+  font-family: Citroen Type;
+  src: url(./font/Citroen\ Regular.ttf);
+}
+
+.header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 2px solid black;
+  margin-bottom: 10vh;
+  width: 100%;
+}
+
+.text-black {
+  color: black !important;
+}
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  max-width: 13vh;
+}
+
+.logo {
+  max-width: 100%;
+}
+
+.banner-header {
+  /* background-image: url('../../Images/Header-banner.jpg'); */
+  background-size: cover;
+  min-height: 30vh;
+  width: 100%;
+}
+
+.top-right-elements {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.user-display {
+  color: black;
+  font-weight: bold;
+  margin-right: 20px;
+  margin-bottom: 0px;
+}
+
+.top-left-elements {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.form-group.col-md-3.d-flex.flex-column.align-items-start {
+  display: inline-flex;
+  justify-content: end;
+}
+
+.form-control.form-control-sm {
+  margin-right: 3px;
+}
+
+.btn.btn-danger.mb-3.float-right {
+  float: right;
+  margin-top: 25px;
+}
+
+.PeugeotHeader {
+  height: 80px;
+  background-color: #ffffff;
+}
+
+.PeugeotLogoWhite1 {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+.ChangeCompany,
+.MyRequests,
+.NewRequest,
+.Fr,
+.De,
+.It {
+  font-family: "Citroen Type", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.ChangeCompany {
+  font-size: 14px;
+}
+
+.MyRequests,
+.NewRequest {
+  font-size: 10px;
+}
+
+.Fr,
+.De,
+.It {
+  /* margin-top: 2%;
+    margin-right:10%; */
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.nav-link {
+  color: #3b3938;
+  font-size: 16px;
+  font-family: "Citroen Type", sans-serif;
+  font-weight: 400;
+  word-wrap: break-word;
+}
+.border-bottom-contract {
+  margin-top: 10px;
+  border-bottom: 1px solid #3b3938;
+  font-weight: 400;
+}
+
+
+.Language {
+  margin-top: 2%;
+  margin-right: 3%;
+}
+.signout-button {
+  margin-top: -6%;
+  font-size: 10px;
+  color: #000000;
+}
+
+/* Grid table: */
+
+.RequestNumber {
+  text-align: center;
+  color: black;
+  font-size: 14px;
+  font-family: "Citroen Type";
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+.Model {
+  text-align: center;
+  color: black;
+  font-size: 14px;
+  font-family: "Citroen Type";
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+.Vin {
+  text-align: center;
+  color: black;
+  font-size: 14px;
+  font-family: "Citroen Type";
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+.PeugeotTag {
+  padding-left: 11px;
+  padding-right: 11px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  background: #107c10;
+  border-radius: 100px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+}
+
+.Tag {
+  color: #000000;
+  font-size: 10px;
+  font-family: "Citroen Type";
+  font-weight: 700;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+
+.lookup-text {
+  font-family: "Citroen Type";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.peugeot th,
+.peugeot td {
+  text-align: center;
+  color: #fff;
+  font-family: "Citroen Type";
+  font-weight: 700;
+  font-size: 144px;
+  word-wrap: break-word;
+}
+
+.peugeot th {
+  background-color: #3b3938;
+}
+
+.experimental-classname {
+  background-color: #3b3938;
+}
+
+.experimental-classname .gridjs-pagination {
+  color: white;
+  font-weight: 500;
+  border: none;
+}
+
+.experimental-classname .gridjs-pagination .gridjs-pages button {
+  background-color: #3b3938;
+  color: white;
+  font-weight: 500;
+  border: none;
+}
+
+.experimental-classname .gridjs-pagination .gridjs-pages button:hover {
+  background-color: white;
+  color: #3b3938;
+  cursor: pointer;
+}
+
+#table-container {
+  margin-top: -12.5% !important;
+  position: relative !important;
+  z-index: 1;
+}
+
+.modal-black {
+  color: #3b3938;
+}
+
+body {
+  font-family: "Citroen Type";
+}
+
+/* Rest of the code remains the same */
+.styled-form {
+  border-radius: 4px;
+  background: #fff;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.12),
+    0px 2px 4px 0px rgba(0, 0, 0, 0.14);
+}
+
+.form-input {
+  color: #787b80;
+}
+
+.modal-opacity {
+  opacity: 0.9;
+}
+
+/* Calendar  */
+
+.ui-datepicker-calendar {
+  background-color: white;
+}
+.ui-state-default {
+  background: white !important;
+  color: #3b3938;
+  border: none !important;
+}
+/* Modify the overall calendar appearance */
+#ui-datepicker-div {
+  background-color: white;
+  font-family: "Citroen Type", sans-serif;
+}
+
+/* Change the header background and text color */
+.ui-datepicker-header {
+  background: white !important;
+  color: #3b3938;
+}
+
+/* Change the prev/next button color */
+.ui-datepicker-prev,
+.ui-datepicker-next {
+  color: #3b3938;
+}
+
+/* Change the month and year color */
+.ui-datepicker-title .ui-datepicker-month,
+.ui-datepicker-title .ui-datepicker-year {
+  font-family: "Citroen Type";
+  color: #3b3938;
+}
+
+/* Change the day color */
+.ui-datepicker-calendar th span {
+  font-family: "Citroen Type";
+  color: #3b3938;
+}
+
+/* Change the date number color */
+.ui-datepicker-calendar td a {
+  font-family: "Citroen Type";
+  color: white;
+}
+.modal-content {
+  border-radius: 0px;
+}
+#newContractModal,
+#see-more-modal,
+#terms-conditions-modal {
+  background-color: white;
+}
+.PeugeotHeader {
+  z-index: 9999;
+  position: relative;
+}
+
+/* .modal-content {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+  background-color: #e9e9e9;
+}
+
+#search-form .form-group:nth-child(1) {
+  min-width: 25%;
+}
+
+#textbox1 {
+  font-family: "Citroen Type", sans-serif;
+  color: #787b80;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+.citroen-label {
+  font-family: "Citroen Type", sans-serif;
+  color: #787b80;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+.lookup-text h2 {
+  font-family: "Citroen Type", sans-serif;
+  color: #787b80;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+.form-select-sm {
+  font-family: "Citroen Type", sans-serif;
+  color: #787b80;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+#vin {
+  font-family: "Citroen Type", sans-serif;
+  color: #787b80;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+#startdate , #enddate {
+  font-family: "Citroen Type", sans-serif;
+  color: #787b80;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  word-wrap: break-word;
+}
+
+.form-control {
+  /* border-right: 1px solid black; */
+  border-bottom: 1px solid black;
+  font-family: "Citroen Type";
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.centered-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .gridjs-tr {
+  text-align: center!important; 
+} */
+
+.gridjs-search {
+  margin-bottom: 6%;
+  float: right;
+  width: auto;
+}
+
+.gridjs-search-input {
+  border-radius: 0px !important;
+  border-bottom: 1px solid #000 !important;
+  width: 100%;
+  margin-left: -5%;
+}
+
+#simulate-price {
+  margin-top: 75px;
+}
+
+/* Medias queries */
+
+@media (max-width: 991px) {
+  .gridjs-search-input {
+    border-radius: 0px !important;
+    border-bottom: 1px solid #000 !important;
+    border-right: 1px solid #000 !important;
+    border-top: 1px solid #f0f0f0 !important;
+    width: auto !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    margin-left: 5%;
+  }
+  .gridjs-search {
+    margin-bottom: 0%;
+    margin-top: 11%;
+    float: left;
+  }
+}
+
+
+
+.lookup-text {
+  margin-top: 4%;
+  margin-bottom: 2%;
+}
+.PeugeotHeader {
+  padding-top: 10px;
+}
+
+.user-logout-section {
+  margin-left: 30px;
+}
+
+.select2-selection--single {
+  border-color: white !important;
+}
+
+.select2-selection--single {
+  border-color: white !important;
+}
+
+.select2-results_options {
+  z-index: 9999;
+}
+/* .positioned-title {
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -50%);
+  z-index: 1050;
+} */
+.positionModal{
+  padding-top: 170px!important;
+  }
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  color: inherit !important;
+}
+
+.nav-links a#new-contract-link {
+  display: inline-block;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.border-bottom-contract {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+.nav-link a#new-extension-link {
+  display: inline-block;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.nav-links a#my-requests {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+.btn {
+  font-size: 12px;
+  background-color: #57718a;
+  color: white;
+  font-weight: 500;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  display: inline;
+  border-radius: 100px !important;
+  transition: background-color 0.3s ease-in-out;
+  /* margin-left: 10px; */
+}
+
+.btn:hover {
+  background-color: black;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn:active {
+  background-color: black;
+}
+
+.btn:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+
+.btn[disabled]:hover {
+  background-color: #ccc;
+}
+
+.btn[disabled]:active {
+  background-color: #ccc;
+}
+
+.btn[disabled]:focus {
+  outline: none;
+}
+
+.btn-submit{
+    background-color: #DA291C;
+    border: none;
+}
+
+@media (min-width: 1400px) {
+  #table-container {
+    min-width: fit-content !important;
+  }
+}
+
+.my-requests-section {
+  display: none;
+}
+
+
+.nav-links {
+  border-bottom: 1px solid black;
+  border-radius: 4px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  }
+

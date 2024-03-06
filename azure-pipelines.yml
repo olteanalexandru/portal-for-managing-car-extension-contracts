@@ -1,0 +1,47 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+trigger:
+  - main  # Specify the branch you want to trigger the pipeline on
+
+pool:
+  vmImage: 'ubuntu-latest'  # Use the appropriate agent image for your needs
+
+steps:
+  - checkout: self
+
+  - task: NodeTool@0
+    inputs:
+      versionSpec: '14.x'  # Use the appropriate Node.js version
+    displayName: 'Install Node.js'
+
+  - script: |
+      npm install
+    displayName: 'Install Dependencies'
+
+  - script: |
+      # Start the server in the background
+      nohup npm run start &
+      # Save the PID of the server process
+      echo $! > .pidfile
+      # Wait for the server to start
+      sleep 10
+    displayName: 'Start server'
+
+  - script: |
+      # Add your tests or other tasks here
+    displayName: 'Run tests'
+
+  - script: |
+      # Stop the server
+      kill $(cat .pidfile)
+    displayName: 'Stop server'
+
+  - task: AzureStaticWebApp@0
+    inputs:
+      app_location: '/app' # Location of your application code
+      app_artifact_location: '/app' # Location of your build output (in this case, the source code)
+      build_command: '' # Empty build command
+      azure_static_web_apps_api_token: $(deployment_token2) # Your deployment token
+    displayName: 'Deploy to Azure Static Web Apps'

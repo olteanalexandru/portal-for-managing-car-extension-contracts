@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="./Images/login-page/PCDO.png" type="image/png" sizes="16x16">
+    <META HTTP-EQUIV="content-type" CONTENT="text/html; charset=utf-8">
+    <title>PCDO servicevertrage</title>
+    <script src="./lib/msal-browser.min.js"></script>
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <script src="./config.js"></script>
+    <script src="./authConfig.js"></script>
+    <script src="./authRedirect.js"></script>
+    <script src="./Components/Translator.js"></script>
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+    <style>
+        .logo-container {
+            display: none;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            margin-top: 50px;
+        }
+        .logo-link {
+            padding: 10px;
+            transition: transform 0.3s;
+        }
+        .logo-link.bordered-logo {
+            border: 2px solid #ccc;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .logo-image {
+            width: 250px; 
+            height: 250px; 
+            object-fit: contain; /* Maintain aspect ratio without stretching */
+        }
+        .logo-link:hover {
+            transform: scale(1.1);
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Centering the 'no roles' message */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .user-has-no-roles {
+            display: none; 
+            margin-top: 20px;
+            max-width: 75%;
+        }
+
+        /* Don't have an account yet message */
+        .register-message {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin: 10px;
+            display: none;
+        }
+
+        /* Show register message if no roles */
+        .user-has-no-roles , .register-message {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="register-message">
+        <p data-i18n="register.noAccount">Don't have an account yet?</p>
+        <a href="/Register.html" class="btn btn-primary" data-i18n="register.registerBtn">Register</a>
+    </div>
+    <div class="logo-container">
+    
+        <a href="/Citroen.html" class="logo-link">
+            <img src="./Images/login-page/Citroen Logo.png" class="logo-image" alt="Citroen Logo">
+        </a>
+        <a href="/Opel.html" class="logo-link">
+            <img src="./Images/opel latest.png" class="logo-image" alt="Opel Logo">
+        </a>
+        <a href="/Peugeot.html" class="logo-link">
+            <img src="./Images/login-page/peugeot-10.jpg" class="logo-image" alt="Peugeot Logo">
+        </a>
+        <a href="/Dsautomobiles.html" class="logo-link">
+            <img src="./Images/login-page/ds-automobiles-logo.png" class="logo-image" alt="DS Automobiles Logo">
+        </a>
+    </div>
+    <div class="user-has-no-roles alert alert-warning">
+        <h1 data-i18n="nav.noRoles">⚠️ Sorry, you don't have any assigned roles</h1>    
+    </div>
+
+</body>
+
+<script src="./Components/DisplayRoleLogos.js"></script>
+<script src="https://unpkg.com/@andreasremdt/simple-translator@latest/dist/umd/translator.min.js"></script>
+</html>

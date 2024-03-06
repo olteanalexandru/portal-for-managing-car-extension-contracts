@@ -1,0 +1,184 @@
+{
+  "nav": {
+    "newContract": "Contratto di garanzia",
+    "newExtension": "Estensione garanzia",
+    "myRequests": "Le mie richieste",
+    "noRoles": "⚠️ Spiacente, non hai i privilegi per accedere al portale. Per supporto contatta <a href='mailto:it-helpdesk@psa-import.ch'>it-helpdesk@psa-import.ch</a>. ⚠️",
+    "logout": "Esci",
+    "login": "Accedi",
+    "register": "Registrati"
+  },
+  "button": {
+    "logOut": "Esci",
+    "requestOffer": "Richiedi offerta",
+    "submitRequest": "Invia richiesta",
+    "activateOffer": "Attiva offerta",
+    "saveChanges": "Salva modifiche",
+    "close": "Chiudi",
+    "simulateRequest": "Simula richiesta",
+    "simulatePrice": "Simula prezzo",
+    "resetFilter": "Reimposta"
+  },
+  "lookup": {
+    "title": "Le tue richieste:"
+  },
+  "searchForm": {
+    "customerInput": {
+      "placeholder": "Cliente:"
+    },
+    "name": {
+      "placeholder": "John Doe"
+    },
+    "model": {
+      "placeholder": "Modello"
+    },
+    "address": {
+      "placeholder": "Thurgauerstrasse 35, 8050 Zurigo, Svezia"
+    },
+    "vin": {
+      "placeholder": "VIN:"
+    },
+    "requestType": {
+      "placeholder": "Tipo di richiesta di garanzia"
+    },
+    "contract": {
+      "option": "Contratto di garanzia"
+    },
+    "extension": {
+      "option": "Estensione garanzia"
+    },
+    "startDate": {
+      "placeholder": "Data inizio"
+    },
+    "endDate": {
+      "placeholder": "Data fine:"
+    },
+    "zipCity": {
+      "placeholder": "8050"
+    },
+    "companyName": {
+      "placeholder": "Peugeot Svizzera SA"
+    },
+    "efitNumber": {
+      "placeholder": "12347658"
+    },
+    "actualKilometers": {
+      "placeholder": "125000"
+    },
+    "monthsToCover": "Mesi da coprire",
+    "coveredKilometers": "Kilometri coperti"
+  },
+  "modal": {
+    "title": "Estensioni di garanzia / Contratti di servizio",
+    "contractType": "Tipo di contratto:",
+    "contractTypeOption": "Tipi di contratto",
+    "contract": "Contratto",
+    "extension": "Estensione",
+    "name": "Nome, Cognome:",
+    "address": "Indirizzo:",
+    "zipCity": "CAP / Città:",
+    "clienttitle": "Cliente",
+    "companyName": "Nome dell'azienda:",
+    "efitNumber": "Numero EFIT:",
+    "partnerTitle": "Socio",
+    "model": "Modello :",
+    "vin": "VIN :",
+    "vehicletitle": "Veicolo",
+    "actualMileage": "Kilometri attuali:",
+    "monthsToCover": "Termine coperto (mesi):",
+    "coveredMileage": "Kilometri massimi:",
+    "servicesTitle": "Servizi",
+    "pricetitle": "Prezzo secondo configuratore",
+    "price": "Importo fattura incl. IVA:",
+    "contractLevel": "Livello di contratto:",
+    "contractLevelOption": "Livello di contratto",
+    "activateButton": "Attiva",
+    "downloadButton": "Scarica",
+    "expirationMessage": "Simulazione estensione scaduta",
+    "finish": "Tempo di completamento",
+    "back" : "Torna alla lista",
+    "Status" : "Stato"
+    
+  },
+  "extensionModal": {
+    "title": "Estensione",
+    "efitNumber": "Numero EFIT/Codice rivenditore:",
+    "vin": "VIN:",
+    "monthsToCover": "Mesi di copertura garanzia:",
+    "model": "Modello:",
+    "coveredMileage": "Chilometraggio coperto:",
+    "actualMileage": "Chilometraggio attuale:",
+    "contractLevel": "Livello di contratto:",
+    "name": "Nome/Descrizione:",
+    "generalInfo": "Informazioni generali:",
+    "choose": "Scegli..."
+  },
+  "icons": {
+    "user": "Utente",
+    "page1": "Pagina 1",
+    "page2": "Pagina 2"
+  },
+  "grid":{
+    "data":{
+      "contractType_Contract": "C",
+      "contractType_Extension": "E"
+    }
+  },
+  "columns": {
+    "requestNumber": "Numero di richiesta",
+    "customerName": "Nome del cliente",
+    "model": "Modello",
+    "vin": "VIN",
+    "status": "Stato",
+    "actions": "Azioni"
+  },
+  "status": {
+    "inProgress": "In corso",
+    "completed": "Completato",
+    "declined": "Rifiutato"
+  },
+  "actions": {
+    "locked": "Bloccato",
+    "getPrice": "Ottieni prezzo",
+    "simulating": "Simulando il prezzo...",
+    "requesting": "Richiesta offerta, attendere prego..."
+
+
+  },
+  "pagination": {
+    "previous": "Precedente",
+    "next": "Successivo",
+    "showingResults": "Mostrando risultati da {from} a {to} di {total}"
+  },
+  "label": {
+    "consent_1": "Ho letto e accetto i &nbsp;",
+    "link": "Termini e condizioni",
+    "consent_2": "."
+  },
+  "errors": {
+    "TokenExpired": "La tua sessione è scaduta, per favore effettua nuovamente il login",
+    "unkownError": "Si è verificato un errore sconosciuto, contatta il supporto",
+    "contractLevelNotSelected": "Seleziona il livello del contratto",
+    "tacAgreementNeeded": "Accetta i Termini e le Condizioni"
+  },
+  "requestSuccess":{
+    "extensionActivated": "Attivazione dell'estensione inviata, la tua richiesta verrà evasa il prima possibile",
+    "contractActivated": "Attivazione dell' contratto inviata, la tua richiesta verrà evasa il prima possibile"
+  },
+  "validation":{
+    "totalAmountMissing": "Per favore, richiedi prima una simulazione di prezzo"
+  },
+  "register":{
+    "efit": "Numero EFIT <span class=\"required\">*</span>:",
+    "garage": "Officina <span class=\"required\">*</span>:",
+    "email": "Email <span class=\"required\">*</span>:",
+    "brand": "Marca <span class=\"required\">*</span>:",
+    "submit": "Invia",
+    "note": "Nota: La tua richiesta verrà inviata ad un amministratore per l'approvazione. <br/> L'accesso alla piattaforma PCDO verrà concesso solo dopo l'approvazione.",
+    "noAccount": "Non hai un account?",
+    "register": "Registrati",
+    "RegAnAccount": "Registra un account",
+    "language": "Lingua predefinita"
+
+  }
+}

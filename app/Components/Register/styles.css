@@ -1,0 +1,103 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fcfcfc;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.top-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.language-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.language-link {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.signout-button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    margin-top: 2%;
+}
+
+form {
+    min-width: 800px;
+    background-color: #fff;
+    padding: 30px;
+  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+padding: 10px;
+margin: 5px 0;
+border-radius: 5px;
+border: 1px solid #ccc;
+width: 50%;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+input[type="submit"]:hover {
+    background-color: #0062cc;
+}
+
+.required {
+    color: red;
+}
+.modal-footer {
+border-top: 1px solid lightgrey;
+margin-top: 20px;
+padding-top: 20px;
+}

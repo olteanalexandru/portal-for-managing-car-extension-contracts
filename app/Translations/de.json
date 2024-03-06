@@ -1,0 +1,180 @@
+{
+  "nav": {
+    "newContract": "Neuer Garantievertrag",
+    "newExtension": "Garantieverlängerung",
+    "myRequests": "Anfragen",
+    "noRoles": "⚠️ Entschuldigung, Sie haben keine Berechtigung, um auf das Portal zuzugreifen. Bei Unterstützung kontaktieren Sie bitte <a href='mailto:it-helpdesk@psa-import.ch'>it-helpdesk@psa-import.ch</a>. ⚠️",
+    "logout": "Abmelden",
+    "login": "Anmelden",
+    "register": "Registrieren"
+  },
+  "button": {
+    "logOut": "Abmelden",
+    "requestOffer": "Angebot anfordern",
+    "activateOffer": "Aktivieren",
+    "submitRequest": "Anfrage senden",
+    "saveChanges": "Änderungen speichern",
+    "close": "Schließen",
+    "simulateRequest": "Anfrage simulieren",
+    "simulatePrice": "Preis simulieren",
+    "resetFilter": "Zurücksetzen"
+  },
+  "lookup": {
+    "title": "Ihre Anfragen:"
+  },
+  "searchForm": {
+    "customerInput": {
+      "placeholder": "Kunde:"
+    },
+    "name": {
+      "placeholder": "Max Mustermann"
+    },
+    "model": {
+      "placeholder": "Modell"
+    },
+    "address": {
+      "placeholder": "Thurgauerstrasse 35, 8050 Zürich, Schweiz"
+    },
+    "vin": {
+      "placeholder": "VIN:"
+    },
+    "requestType": {
+      "placeholder": "Art der Garantieanfrage"
+    },
+    "contract": {
+      "option": "Neuabschluss"
+    },
+    "extension": {
+      "option": "Verlängerung"
+    },
+    "startDate": {
+      "placeholder": "Startdatum"
+    },
+    "endDate": {
+      "placeholder": "Enddatum:"
+    },
+    "zipCity": {
+      "placeholder": "8050"
+    },
+    "companyName": {
+      "placeholder": "Peugeot Suisse SA"
+    },
+    "efitNumber": {
+      "placeholder": "12347658"
+    },
+    "actualKilometers": {
+      "placeholder": "125000"
+    },
+    "monthsToCover": "Monate zur Abdeckung",
+    "coveredKilometers": "Abgedeckte Kilometer"
+  },
+  "modal": {
+    "title": "Garantieverlängerungen / Serviceverträge",
+    "contractType": "Vertragstyp:",
+    "contractTypeOption": "Vertragstypen",
+    "contract": "Vertrag",
+    "extension": "Verlängerung",
+    "name": "Name, Nachname:",
+    "address": "Adresse:",
+    "zipCity": "PLZ / Stadt:",
+    "clienttitle": "Kunde",
+    "companyName": "Firmenname:",
+    "efitNumber": "EFIT-Nummer:",
+    "partnerTitle": "Geschäftspartner",
+    "model": "Modell",
+    "vin": "VIN:",
+    "vehicletitle": "Fahrzeug",
+    "actualMileage": "Aktuelle Kilometer:",
+    "monthsToCover": "Abgedeckter Zeitraum (Monate):",
+    "coveredMileage": "Maximale Kilometer:",
+    "servicesTitle": "Dienstleistungen",
+    "pricetitle": "Preis gemäss Konfigurator",
+    "price": "Rechnungsbetrag inkl. MwSt.:",
+    "contractLevel": "Vertragsstufe:",
+    "contractLevelOption": "Vertragsstufe",
+    "activateButton": "Aktivieren",
+    "downloadButton": "Herunterladen",
+    "expirationMessage": "Verlängerungssimulation abgelaufen",
+    "finish": "Endzeit",
+    "back" : "Zurück zur Liste",
+    "Status" : "Status"
+  },
+  "extensionModal": {
+    "title": "Verlängerung",
+    "efitNumber": "EFIT-Nummer/Handelscode:",
+    "vin": "VIN:",
+    "monthsToCover": "Monate zur Garantieabdeckung:",
+    "model": "Modell:",
+    "coveredMileage": "Abgedeckte Kilometer:",
+    "actualMileage": "Aktueller Kilometerstand:",
+    "contractLevel": "Vertragsstufe:",
+    "name": "Name/Beschreibung:",
+    "generalInfo": "Allgemeine Informationen:",
+    "choose": "Auswählen..."
+  },
+  "icons": {
+    "user": "Benutzer",
+    "page1": "Seite 1",
+    "page2": "Seite 2"
+  },
+  "grid":{
+    "data":{
+      "contractType_Contract": "N",
+      "contractType_Extension": "V"
+    }
+  },
+  "columns": {
+    "requestNumber": "Anfragenummer",
+    "customerName": "Kundenname",
+    "model": "Modell",
+    "vin": "VIN",
+    "status": "Status",
+    "actions": "Aktionen"
+  },
+  "status": {
+    "inProgress": "In Bearbeitung",
+    "completed": "Abgeschlossen",
+    "declined": "Abgelehnt"
+  },
+  "actions": {
+    "locked": "Gesperrt",
+    "getPrice": "Preis abrufen",
+    "simulating": "Preis simulieren...",
+    "requesting": "Angebot anfordern, bitte warten..."
+  },
+  "pagination": {
+    "previous": "Zurück",
+    "next": "Weiter",
+    "showingResults": "Zeige {from} bis {to} von {total} Ergebnissen"
+  },
+  "label": {
+    "consent_1": "Ich habe die allegemeinen ",
+    "link": "Geschäftsbedingungen ",
+    "consent_2": "gelesen und verstanden"
+  },
+  "errors": {
+    "TokenExpired": "Ihre Sitzung ist abgelaufen, bitte melden Sie sich erneut an",
+    "unkownError": "Ein unbekannter Fehler ist aufgetreten, bitte kontaktieren Sie den Support",
+    "contractLevelNotSelected": "Bitte wählen Sie die Vertragsstufe aus",
+        "tacAgreementNeeded": "Bitte stimmen Sie den Allgemeinen Geschäftsbedingungen zu"
+  },
+  "requestSuccess":{
+    "extensionActivated": "Erweiterungsaktivierung gesendet, Ihre Anfrage wird so schnell wie möglich bearbeitet",
+    "contractActivated": "gesendet, Ihre Anfrage wird so schnell wie möglich bearbeitet"
+  },
+  "validation":{
+    "totalAmountMissing": "Bitte fordern Sie zuerst eine Preis-Simulation an"
+  },
+  "register":{
+    "efit": "EFIT-Nummer <span class=\"required\">*</span>:",
+    "garage": "Garage <span class=\"required\">*</span>:",
+    "email": "E-Mail <span class=\"required\">*</span>:",
+    "brand": "Marke <span class=\"required\">*</span>:",
+    "submit": "Absenden",
+    "note": "Hinweis: Ihre Anmeldung wird an einen Administrator zur Genehmigung gesendet. <br/> Der Zugang zur PCDO-Plattform wird erst nach Genehmigung gewährt.",
+    "noAccount": "Sie haben noch kein Konto?",
+    "register": "Registrieren",
+    "RegAnAccount": "Registrieren Sie ein Konto",
+    "language": "Standard-Sprache"
+  }
+}

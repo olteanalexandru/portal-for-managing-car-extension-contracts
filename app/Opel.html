@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <META HTTP-EQUIV="content-type" CONTENT="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!-- Favicon -->
+    <link rel="icon" href="./Images/login-page/Opel Logo 3.png" type="image/png" sizes="16x16">
+    <title>PCDO servicevertrage</title>
+    <!-- stylesheets -->
+
+        <script src="./lib/jquery.min.js"></script>
+    <script src="./lib/jquery-ui.min.js"></script>
+    <script src="./lib/select2.min.js"></script>
+    <script src="./lib/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="./lib/mermaid.min.css">
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+ <link href="./lib/select2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./globals.css">
+    <link rel="stylesheet" type="text/css" href="./Components/Opel/styles.css">
+
+
+    <!-- scripts -->
+    <script src="./lib/translator.min.js"></script>
+    <script src="./Components/Opel/VarAndConsts.js"></script>
+
+    <!-- Include Semantic UI JS here if you have it -->
+    <link rel="stylesheet" type="text/css" href="./Components/Semantic-UI-CSS-master/semantic.min.css">
+    <script src="./lib/gridjs.umd.js"></script>
+    <script src="./lib/msal-browser.min.js"></script>
+    <script src="./lib/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/75cac2755f.js" crossorigin="anonymous"></script>
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+    <script src="./Components/CustomStyles.js"></script>
+    <script src="./config.js"></script>
+    <script src="./Components/Translator.js"></script>
+    <script src="./authConfig.js"></script>
+    <script src="./authRedirect.js"></script>
+</head>
+    <body>
+
+      <!-- Header section -->
+      <div class="container-fluid PeugeotHeader text-white text-center">
+         <div class="container">
+          <div class="row align-items-center justify-content-between mx-1">
+              <div class="col-auto">
+               <a href="/Opel.html" class="text-black">
+               <img class="PeugeotLogoWhite1" src="./Images/opel latest.png" alt="Peugeot Logo" />
+               <span class="ChangeCompany">
+               Opel
+            </a>
+               </span>
+            </div>
+            <div class="col d-flex justify-content-end" id="mobilemenu">
+               <div class="nav d-flex justify-content-between align-items-end">
+                  <div class="nav-links">
+                     <a id="new-contract-link" href="#" title="New contract" class="nav-link my-requests my-requests-section" data-i18n="nav.newContract">New Contract</a>
+                     <a id="my-requests"  href="#" title="New contract" class="nav-link my-requests my-requests-section" data-i18n="nav.myRequests">My Requests</a>
+                    
+                  </div>
+               </div>
+               <div class="user-logout-section text-end d-flex align-items-center">
+                  <div class="Language d-flex justify-content-end">
+                     <a href="/#" value="de" class="Fr language-link text-black me-2" onclick="location.reload()">DE</a>
+                     <a href="/#" value="fr" class="De language-link text-black me-2" onclick="location.reload()">FR</a>
+                     <a href="/#" value="it" class="It language-link text-black me-2" onclick="location.reload()">IT</a>
+                          <!-- Dropdown menu for logout and register -->
+                  <div class="dropdown top-button ">
+                     <button class="btn dropdown-toggle text-white" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-user"></i>
+                     </button>
+                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#" onclick="signOut();"><i class="fas fa-sign-out-alt"></i><p data-i18n="nav.logout" class="ml-1"> Logout</p></a>
+                        <a class="dropdown-item" href="/register"><i class="fas fa-user-plus"></i><p data-i18n="nav.register" class="ml-1"> Register</p></a>
+                        
+                     </div>
+                  </div>
+                  <!-- End of dropdown menu -->
+                     <button class="btn fas fa-home top-button" onclick="window.location = '/index.html';">
+                        <!-- <a href="/index.html" class="btn fa fa-home" aria-hidden="true"></a> -->
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+    
+
+   <!-- Search form section -->
+   <div class="container citroen-theme" id="table-location">
+      <div class="lookup-text" data-i18n="lookup.title">Your requests:</div>
+      <div class="container NegativeMaginTop">
+         <form id="search-form" class="row align-items-end justify-content-between"
+            style="z-index: 9; position: relative;">
+            <div class="form-group col-md-3 col-sm-6 removePaddingLeft">
+               <div class="container">
+                  <select id="model" class="form-select form-select-sm form-control select2" aria-placeholder="model">
+                     <option value="" selected disabled>Model</option>
+                  </select>
+               </div>
+            </div>
+            <div class="form-group col-md-3 col-sm-6">
+               <select id="version" class="form-select form-select-sm form-control">
+                  <option value="" selected data-i18n="searchForm.requestType.placeholder">Choose...</option>
+                  <option value="Contract" data-i18n="searchForm.contract.option">New Contract</option>
+                  <option value="Extension" data-i18n="searchForm.extension.option">New Extension</option>
+               </select>
+            </div>
+            <div class="form-group col-md-2 col-sm-6">
+               <div class="input-group citroen-search-group">
+                  <input type="text" id="startdate" class="form-control form-control-sm"  
+                  data-i18n="searchForm.startDate.placeholder" autocomplete="off">
+               </div>
+            </div>
+            <div class="form-group col-md-2 col-sm-6">
+               <div class="input-group citroen-search-group">
+                  <input type="text" id="enddate" class="form-control form-control-sm removePaddingRight"
+                     data-i18n="searchForm.endDate.placeholder" autocomplete="off">
+               </div>
+            </div>
+            <div class="form-group col-auto">
+               <div>
+                  <button type="button" id="reset-button" class="btn btn-sm " data-i18n="button.resetFilter"
+                     style="background: none; border: none;">
+                     Reset
+                  </button>
+               </div>
+            </div>
+         </form>
+      </div>
+   </div>
+
+   <!-- Contract modal  -->
+   <div class="modal" id="newContractModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-dialog-centered modal-xl pt-100" role="document">
+         <div class="modal-title positioned-back d-flex align-items-center">
+            <svg width="25px" height="25px" viewBox="-4.8 -4.8 57.60 57.60" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+               <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+               <g id="SVGRepo_iconCarrier">
+                  <path d="M12.9998 8L6 14L12.9998 21" stroke="#000000" stroke-width="4" stroke-linecap="round"
+                     stroke-linejoin="round"></path>
+                  <path
+                     d="M6 14H28.9938C35.8768 14 41.7221 19.6204 41.9904 26.5C42.2739 33.7696 36.2671 40 28.9938 40H11.9984"
+                     stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+               </g>
+            </svg>
+            <div class="ml-1 positioned-back-text" onclick="MyRequestsBtn.click();" data-i18n="modal.back"></div>
+            <h1 class="modal-title positioned-title" id="myModalLabel" data-i18n="modal.title">Warranty extensions /
+               Service contracts</h1>
+         </div>
+         <div class="modal-content">
+            <div class="modal-body">
+               <form class="new-contract-form" id="new-contract-form">
+                  <div class="row">
+                     <div class="col-sm-4">
+                        <div class="form-group">
+                           <label for="contract-type" data-i18n="modal.contractType"></label><span
+                              class="required">*</span>
+                           <select id="contract-type" class="form-control" name="contract-type" required>
+                              <option value="" data-i18n="modal.contractTypeOption"></option>
+                              <option value="false" data-i18n="searchForm.contract.option ">Contract</option>
+                              <option value="true" data-i18n="searchForm.extension.option">Extension</option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="col-sm-4" >
+                        <div class="form-group" id="Level-Area">
+                           <label for="type" data-i18n="modal.contractLevel">Level:</label><span
+                              class="required">*</span>
+                           <select id="the-contract-level" class="form-control" name="the-contract-level" required>
+                              <option value="" data-i18n="modal.contractLevelOption"> </option>
+                           </select>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <h5 class="mt-4 mb-3" data-i18n="modal.clienttitle">Client</h5>
+                        <div class="col-sm-4">
+                           <div class="form-group">
+                              <label for="name-surname" data-i18n="modal.name">Name, Surname:</label><span
+                                 class="required">*</span>
+                              <input type="text" id="name-surname-client" class="form-control"
+                                 name="name-surname-client" required>
+                           </div>
+                        </div>
+                        <div class="col-sm-4">
+                           <div class="form-group">
+                              <label for="address" data-i18n="modal.address">Address:</label><span
+                                 class="required">*</span>
+                              <input type="text" id="client-address" class="form-control"
+                                 data-i18n="[placeholder]searchForm.address" name="client-address" required>
+                           </div>
+                        </div>
+                        <div class="col-sm-4">
+                           <div class="form-group">
+                              <label for="zip-city" data-i18n="modal.zipCity">ZIP / City:</label><span
+                                 class="required">*</span>
+                              <input type="text" id="zip-city" class="form-control"
+                                 data-i18n="[placeholder]searchForm.zipCity" name="zip-city" required>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <h5 class="mt-4 mb-3" data-i18n="modal.partnerTitle">Partner</h5>
+                        <div class="col-sm-4">
+                           <div class="form-group">
+                              <label for="company-name" data-i18n="modal.companyName">Company Name:</label><span
+                                 class="required">*</span>
+                              <input type="text" id="company-name" class="form-control"
+                                 data-i18n="[placeholder]searchForm.companyName" name="company-name" required readonly>
+                           </div>
+                        </div>
+                        <div class="col-sm-4">
+                           <div class="form-group">
+                              <label for="efit-number" data-i18n="modal.efitNumber">EFIT Number:</label><span
+                                 class="required">*</span>
+                              <input type="text" id="efit-number-handlercode" class="form-control"
+                                 data-i18n="[placeholder]searchForm.efitNumber" name="efit-number-handlercode" required readonly
+                                 >
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <h5 class="mt-4 mb-3" data-i18n="modal.vehicletitle">Vehicle</h5>
+                        <div class="col-sm-4">
+                           <div class="form-group">
+                              <label for="the-model" data-i18n="modal.model">Model</label><span
+                                 class="required">*</span>
+                              <select id="the-brand-model" class="form-control" name="the-model" required>
+                                 <option> </option>
+                              </select>
+                           </div>
+                        </div>
+                        <div class="col-sm-4">
+                           <div class="form-group">
+                              <label for="vin-number" data-i18n="modal.vin">VIN Number:</label><span
+                                 class="required">*</span>
+                              <input type="text" id="vin-number-client" class="form-control"
+                                 data-i18n="[placeholder]searchForm.vinNumber" name="vin-number-client" required>
+                           </div>
+                        </div>
+                        <div class="col-sm-4">
+                           <div id="extension-fields">
+                              <div class="actual-kilometers">
+                                 <label for="actual-kilometers" data-i18n="extensionModal.actualMileage">Actual
+                                    Kilometers:</label><span class="required">*</span>
+                                 <input type="text" id="actual-kilometers"
+                                    data-i18n="[placeholder]searchForm.actualKilometers" class="form-control"
+                                    name="actual-kilometers" required>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <h5 class="mt-4 mb-3" data-i18n="modal.servicesTitle">sdServices</h5>
+                        <div class="col-sm-4">
+                           <div class="form-group">
+                              <label for="the-months-to-cover" data-i18n="modal.monthsToCover">Term from the start of
+                                 the
+                                 guarantee (months):</label><span class="required">*</span>
+                              <select id="the-months-to-cover" class="form-control" name="the-months-to-cover" required>
+                                 <option value="" data-i18n="searchForm.monthsToCover"> </option>
+                                 
+                                 <option value="36">36</option>
+                                 <option value="48">48</option>
+                                 <option value="60">60</option>
+                                 <option value="72">72</option>
+                                 <option value="84">84</option>
+                                 <option value="96">96</option>
+                              </select>
+                           </div>
+                        </div>
+                        <div class="col-sm-4">
+                           <div class="form-group">
+
+                              <label for="the-covered-mileage" data-i18n="modal.coveredMileage">Maximum
+                                 Kilometers:</label><span class="required">*</span>
+                              <select id="the-covered-mileage" class="form-control" name="the-covered-mileage" required>
+                                 <option value="" data-i18n="searchForm.coveredKilometers" disabled selected>
+                                 </option>
+                            
+                                 <option value="40000">40 000</option>
+                                 <option value="50000">50 000</option>
+                                 <option value="60000">60 000</option>
+                                 <option value="70000">70 000</option>
+                                 <option value="80000">80 000</option>
+                                 <option value="90000">90 000</option>
+                                 <option value="100000">100 000</option>
+                                 <option value="110000">110 000</option>
+                                 <option value="120000">120 000</option>
+                                 <option value="130000">130 000</option>
+                                 <option value="140000">140 000</option>
+                                 <option value="150000">150 000</option>
+                                 <option value="160000">160 000</option>
+                                 <option value="170000">170 000</option>
+                                 <option value="180000">180 000</option>
+                                 <option value="190000">190 000</option>
+                                 <option value="200000">200 000</option>
+                              </select>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-sm-4">
+                           <div id="invoice-fields">
+                              <h5 class="mt-4 mb-3" data-i18n="modal.pricetitle">Price according to configurator</h5>
+                              <div class="form-group">
+                                 <label for="total-amount" data-i18n="modal.price">Invoice amount incl.
+                                    VAT:</label><span class="required">*</span>
+                                 <input type="text" id="total-amount" class="form-control" name="total-amount" 
+                                    pattern="^[0-9]*$" placeholder="CHF">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-sm-4">
+                           <div id="invoice-fields">
+                              <div class="form-group">
+                                 <div id="simulate-fields">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="mt-4 d-flex ml-auto mb-2  request-offer-button-container">
+                     <button type="submit" id="requestOfferButton"
+                        class="btn btn-primary btn-sm rounded-0 btn-submit mr-2" data-i18n="button.requestOffer">Request Offer</button>
+                  </div>
+               </form>
+               <div class="modal-footer mt-4 pt-2 d-flex flex-column align-items-left text-left" >
+                  <div class="form-group" id="checkbox-footer">
+                     <input type="checkbox" id="consent-checkbox" name="consent-checkbox" required> 
+                     <label for="consent-checkbox" data-i18n="label.consent_1"> I have read and agree to the </label>
+                     <a id="termsAndCondBtn" onclick="downloadTermsAndConditions()" data-i18n="label.link">Terms & Conditions</a><span></span>
+                     <label for="consent-checkbox" data-i18n="label.consent_2"></label>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- End of Contract Modal -->
+
+   <!--See more Modal -->
+   <div class="modal" id="see-more-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog modal-dialog-centered modal-xl pt-100" role="document">
+         <div class="modal-title positioned-back see-more d-flex">
+            <svg width="25px" height="25px" style="margin-bottom:10px" viewBox="-4.8 -4.8 57.60 57.60" fill="none"
+               xmlns="http://www.w3.org/2000/svg">
+               <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+               <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+               <g id="SVGRepo_iconCarrier">
+                  <path d="M12.9998 8L6 14L12.9998 21" stroke="#000000" stroke-width="4" stroke-linecap="round"
+                     stroke-linejoin="round"></path>
+                  <path
+                     d="M6 14H28.9938C35.8768 14 41.7221 19.6204 41.9904 26.5C42.2739 33.7696 36.2671 40 28.9938 40H11.9984"
+                     stroke="#000000" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"></path>
+               </g>
+            </svg>
+            <div class="ml-1 positioned-back-text" onclick="MyRequestsBtn.click();" data-i18n="modal.back"></div>
+         </div>
+         <div class="modal-content">
+            <div class="modal-body">
+               <form class="new-contract-form" id="new-contract-form">
+                  <div class="row">
+                     <div class="col-sm-4">
+                        <div class="form-group">
+                           <label for="see-ContractType" data-i18n="modal.contractType">Contract Type:</label>
+                           <select id="see-ContractType" class="form-control" name="see-ContractType" disabled>
+                              <option value="false" data-i18n="nav.newContract">Contract</option>
+                              <option value="true" data-i18n="nav.newExtension">Extension</option>
+                           </select>
+                           <input type="hidden" id="hidden-see-ContractType">
+                        </div>
+                     </div>
+                     <div class="col-sm-4">
+                        <label for="see-contract-level" data-i18n="modal.contractLevel">Contract Level:</label>
+                        <input type="text" id="see-contract-level" class="form-control" disabled>
+                     </div>
+
+                     <div class="row">
+                        <h5 class="mt-2 mb-2" data-i18n="modal.clienttitle">Client</h5>
+                        <div class="col-sm-4">
+                           <div class="form-group">
+                              <label for="name-surname" data-i18n="modal.name">Name, Surname:</label>
+                              <input type="text" id="the-name" class="form-control" disabled>
+                           </div>
+                        </div>
+                        <div class="col-sm-4">
+                           <div class="form-group">
+                              <label for="address" data-i18n="modal.address">Address:</label>
+                              <input type="text" id="form-address" class="form-control" name="form-address" disabled>
+                           </div>
+                        </div>
+                        <div class="col-sm-4">
+                           <div class="form-group">
+                              <label for="zip-city" data-i18n="modal.zipCity">ZIP / City:</label>
+                              <input type="text" id="zip-city" class="form-control" name="zip-city" disabled>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <h5 class="mt-2 mb-2" data-i18n="modal.partnerTitle">Partner</h5>
+                        <div class="col-sm-4">
+                           <div class="form-group">
+                              <label for="company-name" data-i18n="modal.companyName">Company Name:</label>
+                              <input type="text" id="see-company-name" class="form-control" name="see-company-name"
+                                 disabled>
+                           </div>
+                        </div>
+                        <div class="col-sm-4">
+                           <div class="form-group">
+                              <label for="efit-number" data-i18n="modal.efitNumber">EFIT Number:</label>
+                              <input type="text" id="the-efit-number" class="form-control" disabled>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <h5 class="mt-2 mb-2" data-i18n="modal.vehicletitle">Vehicle</h5>
+                        <div class="col-sm-4">
+                           <div class="form-group">
+                              <label for="the-car-model" data-i18n="modal.model">Model</label>
+                              <input type="text" id="the-car-model" class="form-control" name="the-car-model" disabled>
+                           </div>
+                        </div>
+                        <div class="col-sm-4">
+                           <div class="form-group">
+                              <label for="vin-number" data-i18n="modal.vin">VIN Number:</label>
+                              <input type="text" id="the-vin" class="form-control" disabled>
+                           </div>
+                        </div>
+                        <div class="col-sm-4">
+                           <div class="actual-kilometers">
+                              <label for="actual-kilometers" data-i18n="extensionModal.actualMileage">Actual
+                                 Kilometers:</label>
+                              <input type="text" id="actual-kilometers" class="form-control" name="actual-kilometers"
+                                 disabled>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row">
+                        <h5 class="mt-2 mb-2" data-i18n="modal.servicesTitle">Services</h5>
+                        <div class="col-sm-4">
+                           <label for="months-to-cover-seemore" data-i18n="modal.monthsToCover">Term from the start of
+                              the guarantee (months):</label>
+                           <input type="text" id="months-to-cover-seemore" class="form-control"
+                              name="months-to-cover-seemore" disabled>
+                        </div>
+                        <div class="col-sm-4">
+                           <label for="max-km" data-i18n="modal.coveredMileage">Maximum Kilometers:</label>
+                           <input list="mileage-options" id="the-covered-mileage-seemore" class="form-control"
+                              name="covered-mileage" disabled>
+                        </div>
+                        <div class="row">
+                           <h5 class="mt-2 mb-2" data-i18n="modal.pricetitle">Price according to configurator</h5>
+                           <div class="col-sm-4">
+                              <div class="form-group">
+                                 <label for="the-total-amount" data-i18n="modal.price">Invoice amount incl. VAT:</label>
+                                 <input type="text" id="the-total-amount" class="form-control" name="the-total-amount"
+                                    disabled>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="row">
+                              <div class="col-sm-4">
+                                 <div class="form-group">
+                                    <label for="finish-time" data-i18n="modal.finish">Finish time:</label>
+                                    <input type="text" id="finish-time" class="form-control" disabled>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="row">
+                              <div class="col-sm-12">
+                                 <label for="status-details" data-i18n="modal.Status">Status:</label>
+                                 <textarea id="status-details" class="form-control" rows="3" disabled></textarea>
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="mt-4 d-flex ml-auto mb-4">
+                     <button id="activate-button" type="submit" class="btn btn-primary btn-sm rounded-0 btn-submit mr-2"
+                        data-i18n="modal.activateButton">Activate</button>
+                  </div>
+                  <div class="modal-footer mt-12 pt-2 d-flex flex-column align-items-left">
+                     <div class="mt-4 d-flex ml-auto">
+                        <button id="download-docs" onclick='downloadContract(); return false;'
+                           class="btn btn-primary btn-sm rounded-0 btn-submit mr-2" data-i18n="modal.downloadButton">
+                           <!-- <svg width="16px" height="16px"
+                              viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="#ffffff">
+                              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                              <g id="SVGRepo_iconCarrier">
+                                 <path fill="none" stroke="#000000" stroke-width="2"
+                                    d="M6,14.1818182 L6,17.4545455 L18,17.4545455 L18,14.1818182 M12,6 L12,14 M8.18181818,9.81818182 L12,6 L15.8181818,9.81818182">
+                                 </path>
+                              </g>
+                           </svg> -->
+                           Download</button>
+                     </div>
+                     <div id="expiration-message" class="mt-4 pt-2 flex-column align-items-center"
+                        data-i18n="modal.expirationMessage">Expired</div>
+                     <div class="mt-4 pt-2 d-flex flex-column align-items-center">
+                     </div>
+                  </div>
+               </form>
+
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- End of See More Modal -->
+
+   <div id="loading">
+<h1> </h1>
+   </div>
+
+
+
+   <!-- Api calls -->
+   <script src="./API/CreateContract1.js"></script>
+      <script src="./API/GetData2.js"></script>
+      <script src="./API/Activations3.js"></script>
+      <script src="./API/DownloadContract4.js"></script>
+      <script src="./API/DownloadTerms5.js"></script>
+      <script src="./API/SimulatePrice6.js"></script>
+  
+   <script src="./Modals.js"></script>
+   <!-- jQuery to activate datepicker -->
+   <script src="./Components/datepicker.js"></script>
+   <!-- Script for search form -->
+   
+   <script src="./Components/SubmitListener.js"></script>
+   <!-- Grid Table section -->
+   <script src="./Components/GridList.js"></script>
+   <script>
+      waitForFetchCompletionAndGenerateGrid(role);
+   </script>
+   
+   
+   <script src="./inits.js"></script>
+   <script src="./Components/downloadTerms.js"></script>
+   </div>
+</body>
+
+</html>
+
+
+
+
